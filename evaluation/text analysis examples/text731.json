@@ -1,0 +1,2 @@
+{"data": {"type": "incident", "situations": [{"label": "village", "affected_objects": ["newspapers", "bicycle", "car"]}], "category": "Production Planning", "subcategory": "Sources of Pollution"}, "meta": {"entity": "citizen_report", "project_id": "citizen", "id": "3904284266NgSJuQyZioEgPAKsucQR", "sourceText": "mzawRBiOoIljzIgTLZJY0041430775", "location": {"radius": 0.0, "inferred": "false", "coordinates": [37.980401, 23.757333]}}}
+

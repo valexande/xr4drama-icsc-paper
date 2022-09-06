@@ -1,0 +1,88 @@
+{"data":
+    {"type":"incident",
+        "situations":[
+            {
+                "label":"bar", --> from KB
+                "affected_objects":["man", "man", "car", "ship"]
+            }
+                ]
+            },
+"meta":
+    {
+        "id":"b1419096-037c-4f0b-a99c-01f84f1e08b4",
+        "entity":"citizen_report",
+        "location":
+            {
+                "coordinates":[45.55054180487325,11.548604965209961],
+                "radius":0.0,"inferred":false 
+            },
+                "sourceText":"new allagamento Astichello test",
+                "project_id":"citizen" 
+            }
+    }
+
+
+set of labels
+
+[
+("latitude-37.991292", "longitude-23.749394"), 
+("latitude-37.980401", "longitude-23.757333"), 
+("latitude-45.559496", "longitude-11.530666"), 
+("latitude-45.544771", "longitude-11.564912"), 
+("latitude-50.941638", "longitude-6.921443"), 
+("latitude-50.930927", "longitude-6.951447"), 
+("latitude-35.533753", "longitude-24.06501"), 
+("latitude-35.524678", "longitude-24.08434"), 
+("latitude-37.991292", "longitude-23.749394"), 
+("latitude-37.980401", "longitude-23.757333"), 
+("latitude-37.991292", "longitude-23.749394"), 
+("latitude-35.533753", "longitude-24.065016"), 
+("latitude-35.524678", "longitude-24.084345"), 
+("latitude-35.533753", "longitude-24.065016"), 
+("latitude-35.524678", "longitude-24.084345"),
+("latitude-35.524678", "longitude-24.084345"),
+("latitude-48.142446", "longitude-11.568903"), 
+("latitude-48.130088", "longitude-11.60539"),
+("latitude-48.142446", "longitude-11.568903"), 
+("latitude-48.130088", "longitude-11.60539")]
+
+
+set of category-subcategory
+[
+("Public Services", "Tourist Offices"), 
+("Medical", "Doctors"), 
+("Transportation", "Taxi"), 
+("Transportation", "Bike Rentals"), 
+("Transportation", "Air Travel"), 
+("Production Planning", "Sources of Pollution"), 
+("Production Planning", "Restricted Areas"), 
+("Production Planning", "Snapshots"),
+("Accommodation", "Apartments"),
+("Accommodation", "Campsites"),
+("Commerce", "Clothing"),
+("Commerce", "Electronics"),
+("Commerce", "Other Shops"),
+("Finance", "Exchange Offices"),
+("Disaster Management", "Flooded Reports"),
+("Disaster Management", "Civil Protection"),
+("Disaster Management", "Civil Protection Distribution Places"),
+("Infrastructure", "Antennas"),
+("Infrastructure", "Aqueducts"),
+("Flood Forecasts", "Flood Results From Model"),
+("Flood Forecasts", "Elements at Risk"),
+("Natural Elements", "Water Bodies"),
+("Natural Elements", "Natura 2000 Sites"),
+("Education", "Nurseries"),
+("Education", "Kindergartens"),
+("Education", "Secondary Schools"),
+("Education", "Universities")
+]
+
+labels of area
+
+['hotel_outdoor', 'village', 'harbor', 'field_cultivated', 'railroad_track', 'courtyard', 'market_outdoor', 'building_facade', 'boardwalk', 'fire_escape', 'alley', 'formal_garden', 'canal_urban', 'doorway_outdoor', 'bar', 'skyscraper', 'palace', 'indoor', 'excavation', 'church_outdoor', 'mansion', 'driveway', 'fire_station', 'zen_garden', 'hospital', 'cafeteria', 'grotto', 'creek', 'river', 'parking_lot', 'wind_farm', 'staircase', 'castle', 'train_station_platform', 'museum_outdoor', 'forest_broadleaf', 'motel', 'valley', 'heliport', 'gas_station', 'water_tower', 'athletic_field_outdoor', 'construction_site', 'bridge', 'beach_house', 'cliff', 'coffee_shop', 'amphitheater', 'ruin', 'swimming_pool_outdoor', 'street', 'courthouse', 'restaurant', 'rock_arch', 'tower', 'viaduct', 'pier', 'youth_hostel', 'patio', 'archaelogical_excavation', 'shopfront', 'airport_terminal', 'apartment_building_outdoor', 'crosswalk', 'plaza', 'subway_station_platform', 'field_road', 'inn_outdoor']
+
+
+labels of objects
+
+["man", "car", "woman", "ship", "motorbike", "umbrella", "tree", "gravel", "door", "flower", "grass", "fence", "bicycle", "table", "stare", "box", "chair", "ring", "tool", "weapon", "rope", "window", "newspapers", "manholes", "benches", "bins", "phone boxes", "cranes", "bollard", "post boxes", "air vents", "lamp post"]

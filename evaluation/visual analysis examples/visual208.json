@@ -1,0 +1,6 @@
+{"_id": {"$oid": "61e6d89fca35937de3162dce"}, 
+"header": {"timestamp": "2022-01-18 16:19:05.660883", "sender": "Visual Analysis", "entity": "video", "simmoid": "1420406195626692620", "project_id": "test"}, 
+"shotInfo": [
+
+	{"shotIdx": 2, "startFrame": "434", "endFrame": "435", "objectsFound": [], "peopleInDanger": 0, "vehiclesInDanger": 0, "riverOvertop": false, "area": "none", "outdoor": "none", "emergencyType": "none", "category": "Medical", "subcategory": "Doctors", "coordinate": [45.55054180487325,11.548604965209961], "animalsInDanger": 14, "infraInDanger": ["ceiling", "road", "nurseries", "kindergraden", "university", "tower", "ceiling", "university", "tower", "road", "kindergraden", "kindergraden"], "objectsInDanger": ["Clock", "Bicycle", "Car", "Glass", "Coffee maker", "Pen", "Pencil", "Stove", "Pillow", "Pencil", "Coffee maker", "Bed", "Desk", "Table", "Paper", "Computer", "Bag", "Dish"]}
+]}

@@ -1,0 +1,614 @@
+Object Type SHACL rules for Drama
+
+#comeFromEntity
+xR:obs rdf:type sh:NodeShape;
+    sh:targetClass xR:Observation;
+    sh:property [
+    sh:path xR:comesFromEntity;
+    sh:class xR:MultimediaObject;
+    sh:minCount 1;
+    ].
+
+#consistsOf
+xR:info rdf:type sh:NodeShape;
+    sh:targetClass xR:InformationOfInterest;
+    sh:property [
+    sh:path xR:featureOf;
+    sh:class xR:Observation;
+    sh:minCount 1;
+    ].
+
+#featureOfMetaInstance
+xR:info rdf:type sh:NodeShape;
+    sh:targetClass xR:InformationOfInterest;
+    sh:property [
+    sh:path xR:featureOf;
+    sh:class xR:VisualMetadata;
+    sh:minCount 1;
+    ].
+
+#hasArea
+xR:area rdf:type sh:NodeShape;
+    sh:targetClass xR:Metadata;
+    sh:property [
+    sh:path xR:hasArea;
+    sh:class xR:AreaType;
+    sh:minCount 1; 
+    ].
+
+#hasEmergency
+xR:emer rdf:type sh:NodeShape;
+    sh:targetClass xR:Metadata;
+    sh:property [
+    sh:path xR:hasEmergency;
+    sh:class xR:EmergencyType;
+    sh:minCount 1; 
+    ].
+
+#hasInformationofInterest
+xR:info rdf:type sh:NodeShape;
+    sh:targetClass xR:Observation;
+    sh:property [
+    sh:path xR:hasInformationofInterest;
+    sh:class xR:InformationOfInterest;
+    sh:minCount 1;
+    ].
+
+#hasLocation
+xR:loc rdf:type sh:NodeShape;
+    sh:targetClass xR:InformationOfInterest;
+    sh:property [
+    sh:path xR:hasLocation;
+    sh:class xR:Location;
+    sh:minCount 1;
+    ].
+
+
+#hasMetadata
+xR:meta rdf:type sh:NodeShape;
+    sh:targetClass xR:Observation;
+    sh:property [
+    sh:path xR:hasMetadata;
+    sh:class xR:Metadata;
+    sh:minCount 1;
+    ].
+
+#hasMultimedia
+xR:obs rdf:type sh:NodeShape;
+    sh:targetClass xR:Observation;
+    sh:property [
+    sh:path xR:hasMultimedia;
+    sh:class xR:MultimediaObject;
+    sh:minCount 1;
+    ].
+
+#hasProjectLocation
+xR:pro rdf:type sh:NodeShape;
+    sh:targetClass xR:Project;
+    sh:property [
+    sh:path xR:hasProjectLocation;
+    sh:class xR:Location;
+    sh:minCount 1;
+    ].
+
+#hasResult
+xR:obs rdf:type sh:NodeShape;
+    sh:targetClass xR:FR, xR:Observation;
+    sh:property [
+    sh:path xR:hasResult;
+    sh:class xR:Result;
+    sh:minCount 1;
+    ].
+
+#hasRiskReport
+xR:obs rdf:type sh:NodeShape;
+    sh:targetClass xR:FR, xR:Observation;
+    sh:property [
+    sh:path xR:hasRiskReport;
+    sh:class xR:RiskReport;
+    sh:minCount 1;
+    ].
+
+#hasTextualMetadata
+xR:info rdf:type sh:NodeShape;
+    sh:targetClass xR:FR, xR:InformationOfInterest;
+    sh:property [
+    sh:path xR:hasTextualMetadata;
+    sh:class xR:Result;
+    sh:minCount 1;
+    ].
+
+#hasCitizenLocation
+xR:info rdf:type sh:NodeShape;
+    sh:targetClass xR:InformationOfInterest;
+    sh:property [
+    sh:path xR:hasCitizenLocation;
+    sh:class xR:Result;
+    sh:minCount 1;
+    ].
+
+#hasFRLocation
+xR:fr rdf:type sh:NodeShape;
+    sh:targetClass xR:FR;
+    sh:property [
+    sh:path xR:hasFRLocation;
+    sh:class xR:Location;
+    sh:minCount 1;
+    ].
+
+#included
+xR:user rdf:type sh:NodeShape;
+    sh:targetClass xR:User;
+    sh:property [
+    sh:path xR:included;
+    sh:class xR:Project;
+    sh:minCount 1;
+    ].
+
+#includes
+xR:pro rdf:type sh:NodeShape;
+    sh:targetClass xR:Project;
+    sh:property [
+    sh:path xR:includes;
+    sh:class xR:User;
+    sh:minCount 1;
+    ].
+
+#isConsistedIn
+xR:obs rdf:type sh:NodeShape;
+    sh:targetClass xR:Observation;
+    sh:property [
+    sh:path xR:isConsistedIn;
+    sh:class xR:Project;
+    sh:minCount 1;
+    ].
+
+#usedProcedure
+xR:obs rdf:type sh:NodeShape;
+    sh:targetClass xR:Observation;
+    sh:property [
+    sh:path xR:usedProcedure;
+    sh:class xR:Procedure;
+    sh:minCount 1;
+    ].
+
+#wearedBy
+xR:sen rdf:type sh:NodeShape;
+    sh:targetClass xR:Sensor;
+    sh:property [
+    sh:path xR:wearedBy;
+    sh:class xR:FR;
+    sh:minCount 1;
+    ].
+
+#wearsSensor
+xR:fr rdf:type sh:NodeShape;
+    sh:targetClass xR:FR;
+    sh:property [
+    sh:path xR:wearsSensor;
+    sh:class xR:Sensor;
+    sh:minCount 1;
+    ].
+
+
+Data Type SHACL rules for Drama
+
+#peopleInDanger
+xR:vision rdf:type sh:NodeShape;
+    sh:targetClass xR:VisualMetadata;
+    sh:property [
+    sh:path xR:peopleInDanger;
+    sh:datatype xsd:integer;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#vehiclesInDanger
+xR:vision rdf:type sh:NodeShape;
+    sh:targetClass xR:VisualMetadata;
+    sh:property [
+    sh:path xR:vehiclesInDanger;
+    sh:datatype xsd:integer;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasActivityMetadata
+xR:stress rdf:type sh:NodeShape;
+    sh:targetClass xR:StressLevelMetadata;
+    sh:property [
+    sh:path xR:hasActivityMetadata;
+    sh:datatype xsd:string;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasAreaProb
+xR:meta rdf:type sh:NodeShape;
+    sh:targetClass xR:Metadata;
+    sh:property [
+    sh:path xR:hasAreaProb;
+    sh:datatype xsd:float;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasBuildingFound
+xR:meta rdf:type sh:NodeShape;
+    sh:targetClass xR:VisualMetadata;
+    sh:property [
+    sh:path xR:hasBuildingFound;
+    sh:datatype xsd:boolean;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasBuildingProb
+xR:meta rdf:type sh:NodeShape;
+    sh:targetClass xR:VisualMetadata;
+    sh:property [
+    sh:path xR:hasBuildingProb;
+    sh:datatype xsd:float;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasBuildingTypeProb
+xR:meta rdf:type sh:NodeShape;
+    sh:targetClass xR:VisualMetadata;
+    sh:property [
+    sh:path xR:hasBuildingTypeProb;
+    sh:datatype xsd:float;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasLatitude
+xR:loc rdf:type sh:NodeShape;
+    sh:targetClass xR:Location;
+    sh:property [
+    sh:path xR:hasLatitude;
+    sh:datatype xsd:float;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasLongitude
+xR:loc rdf:type sh:NodeShape;
+    sh:targetClass xR:Location;
+    sh:property [
+    sh:path xR:hasLongitude;
+    sh:datatype xsd:float;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasCost
+xR:loc rdf:type sh:NodeShape;
+    sh:targetClass xR:Location;
+    sh:property [
+    sh:path xR:hasCost;
+    sh:datatype xsd:integer;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasCurrentTime
+xR:obs rdf:type sh:NodeShape;
+    sh:targetClass xR:Observation;
+    sh:property [
+    sh:path xR:hasCurrentTime;
+    sh:datatype xsd:dateTime;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasECGMetadata
+xR:stress rdf:type sh:NodeShape;
+    sh:targetClass xR:StressLevelMetadata;
+    sh:property [
+    sh:path xR:hasECGMetadata;
+    sh:datatype xsd:string;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasEmergencyProb
+xR:visual rdf:type sh:NodeShape;
+    sh:targetClass xR:VisualMetadata;
+    sh:property [
+    sh:path xR:hasEmergencyProb;
+    sh:datatype xsd:float;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasEndFrame
+xR:meta rdf:type sh:NodeShape;
+    sh:targetClass xR:Metadata;
+    sh:property [
+    sh:path xR:hasEndFrame;
+    sh:datatype xsd:integer;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasGeolocation
+xR:loc rdf:type sh:NodeShape;
+    sh:targetClass xR:Location;
+    sh:property [
+    sh:path xR:hasGeolocation;
+    sh:datatype xsd:string;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasId
+xR:obs rdf:type sh:NodeShape;
+    sh:targetClass xR:Observation;
+    sh:property [
+    sh:path xR:hasId;
+    sh:datatype xsd:string;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasIMUMetadata
+xR:stress rdf:type sh:NodeShape;
+    sh:targetClass xR:StressLevelMetadata;
+    sh:property [
+    sh:path xR:hasIMUMetadata;
+    sh:datatype xsd:string;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasObservationType
+xR:obs rdf:type sh:NodeShape;
+    sh:targetClass xR:Observation;
+    sh:property [
+    sh:path xR:hasObservationType;
+    sh:datatype xsd:string;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasProb
+xR:info rdf:type sh:NodeShape;
+    sh:targetClass xR:InformationOfInterest;
+    sh:property [
+    sh:path xR:hasProb;
+    sh:datatype xsd:float;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasProjectId
+xR:pro rdf:type sh:NodeShape;
+    sh:targetClass xR:Project;
+    sh:property [
+    sh:path xR:hasProjectId;
+    sh:datatype xsd:string;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasRespirationMetadata
+xR:stress rdf:type sh:NodeShape;
+    sh:targetClass xR:StressLevelMetadata;
+    sh:property [
+    sh:path xR:hasRespirationMetadata;
+    sh:datatype xsd:string;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasRiskLevel
+xR:meta rdf:type sh:NodeShape;
+    sh:targetClass xR:Metadata;
+    sh:property [
+    sh:path xR:hasRiskLevel;
+    sh:datatype xsd:string;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasRiverOvertop
+xR:visual rdf:type sh:NodeShape;
+    sh:targetClass xR:VisualMetadata;
+    sh:property [
+    sh:path xR:hasRiverOvertop;
+    sh:datatype xsd:boolean;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasShotIdx
+xR:visual rdf:type sh:NodeShape;
+    sh:targetClass xR:VisualMetadata;
+    sh:property [
+    sh:path xR:hasShotIdx;
+    sh:datatype xsd:integer;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasSIMMORef
+xR:video rdf:type sh:NodeShape;
+    sh:targetClass xR:Video;
+    sh:property [
+    sh:path xR:hasSIMMORef;
+    sh:datatype xsd:string;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasSimpleResult
+xR:obs rdf:type sh:NodeShape;
+    sh:targetClass xR:Observation;
+    sh:property [
+    sh:path xR:hasSimpleResult;
+    sh:datatype xsd:integer;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasSituation
+xR:textual rdf:type sh:NodeShape;
+    sh:targetClass xR:TextualMetadata;
+    sh:property [
+    sh:path xR:hasSituation;
+    sh:datatype xsd:string;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasStartFrame
+xR:meta rdf:type sh:NodeShape;
+    sh:targetClass xR:Metadata;
+    sh:property [
+    sh:path xR:hasStartFrame;
+    sh:datatype xsd:integer;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasStreesLevel
+xR:res rdf:type sh:NodeShape;
+    sh:targetClass xR:Result;
+    sh:property [
+    sh:path xR:hasStreesLevel;
+    sh:datatype xsd:float;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasTextualRiskLevel
+xR:text rdf:type sh:NodeShape;
+    sh:targetClass xR:TextualMetadata;
+    sh:property [
+    sh:path xR:hasTextualRiskLevel;
+    sh:datatype xsd:float;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasTime
+xR:obs rdf:type sh:NodeShape;
+    sh:targetClass xR:Location, xR:Observation;
+    sh:property [
+    sh:path xR:hasTime;
+    sh:datatype xsd:dateTime;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasType
+xR:info rdf:type sh:NodeShape;
+    sh:targetClass xR:InformationOfInterest;
+    sh:property [
+    sh:path xR:hasType;
+    sh:datatype xsd:string;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#hasURI
+xR:loc rdf:type sh:NodeShape;
+    sh:targetClass xR:Location;
+    sh:property [
+    sh:path xR:hasURI;
+    sh:datatype xsd:anyURI;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#isOutdoor
+xR:visual rdf:type sh:NodeShape;
+    sh:targetClass xR:VisualMetadata;
+    sh:property [
+    sh:path xR:isOutdoor;
+    sh:datatype xsd:boolean;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].
+
+#isRelatedWithSIMMO
+xR:visual rdf:type sh:NodeShape;
+    sh:targetClass xR:VisualMetadata;
+    sh:property [
+    sh:path xR:isRelatedWithSIMMO;
+    sh:datatype xsd:boolean;
+    sh:minInclusive 0;
+    sh:maxInclusive 1:
+    sh:minCount 1;
+    sh:maxCount 1;
+    ].

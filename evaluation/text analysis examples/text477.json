@@ -1,0 +1,2 @@
+
+{"data": {"type": "incident", "situations": [{"label": "heliport", "affected_objects": ["stare", "tree"]}], "category": "Flood Forecasts", "subcategory": "Elements at Risk"}, "meta": {"entity": "citizen_report", "project_id": "citizen", "id": "1239307646RwMDibbdaRHlFVxkQgln", "sourceText": "VemdSZidfqXOMdZFWtqD1617955700", "location": {"radius": 0.0, "inferred": "false", "coordinates": [48.142442, 11.568903]}}}
